@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download: <%= videoTitle %></title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col items-center min-h-screen font-sans p-4">
+
+  <!-- ปุ่มกลับไปหน้าแรก -->
+  <div class="w-full max-w-2xl mb-4">
+    <a href="/" class="text-blue-500 hover:underline">← Back to Converter</a>
+  </div>
+
+  <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl w-full max-w-2xl text-center">
+    <!-- แสดงรูปปกและชื่อวิดีโอ -->
+    <img src="<%= thumbnailUrl %>" alt="Video Thumbnail" class="rounded-lg mb-4 w-full max-w-sm mx-auto">
+    <h1 class="text-xl md:text-2xl font-bold mb-6 text-gray-800">
+      <%= videoTitle %>
+    </h1>
+
+    <!-- ตารางแสดงตัวเลือกการดาวน์โหลด -->
+    <div class="w-full text-left">
+      <h2 class="text-lg font-semibold mb-3">Available Formats:</h2>
+      <table class="w-full border-collapse">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="p-3 border">Quality</th>
+            <th class="p-3 border">Format</th>
+            <th class="p-3 border">Download</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- วนลูปแสดงทุกฟอร์แมตที่เซิร์ฟเวอร์ส่งมา -->
+          <% formats.forEach(format => { %>
+            <tr class="hover:bg-gray-50">
+              <td class="p-3 border"><%= format.qualityLabel %></td>
+              <td class="p-3 border uppercase"><%= format.container %></td>
+              <td class="p-3 border text-center">
+                <a 
+                  href="/download?id=<%= videoId %>&itag=<%= format.itag %>&container=<%= format.container %>" 
+                  class="bg-red-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-600 transition-colors duration-300 inline-block"
+                >
+                  Download
+                </a>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>

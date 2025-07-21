@@ -1,10 +1,10 @@
 # 📥 YouTube MP3 & MP4 Downloader
 
-A simple and easy-to-use web application for downloading YouTube videos as MP4 or converting them to MP3 audio. This project is built with Node.js, Express, and utilizes `@distube/ytdl-core` for interacting with YouTube and `FFmpeg` for audio conversion.
+A simple and easy-to-use web application for downloading YouTube videos as MP4 or converting them to MP3 audio. This project is built with Node.js, Express, and utilizes `@distube/ytdl-core` for interacting with YouTube 
 
 ---
 
-โปรเจกต์เว็บแอปพลิเคชันสำหรับดาวน์โหลดวิดีโอ YouTube เป็นไฟล์ MP4 หรือแปลงเป็นไฟล์เสียง MP3 ที่ใช้งานง่าย สร้างขึ้นด้วย Node.js, Express โดยใช้ `@distube/ytdl-core` ในการดึงข้อมูลจาก YouTube และใช้ `FFmpeg` สำหรับการแปลงไฟล์เสียง
+โปรเจกต์เว็บแอปพลิเคชันสำหรับดาวน์โหลดวิดีโอ YouTube เป็นไฟล์ MP4 หรือแปลงเป็นไฟล์เสียง MP3 ที่ใช้งานง่าย สร้างขึ้นด้วย Node.js, Express โดยใช้ `@distube/ytdl-core` ในการดึงข้อมูลจาก YouTube 
 
 ## 🎨 Features / ฟีเจอร์
 
@@ -42,7 +42,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 1.  **Clone the repository (or download the source code):**
     **โคลนโปรเจกต์ (หรือดาวน์โหลดซอร์สโค้ด):**
     ```bash
-    git clone https://github.com/YourUsername/youtube-downloader.git
+    git clone (https://github.comYourUsername/YouTube-MP3-MP4-Downloader.git)
     cd youtube-downloader
     ```
     *(Replace `YourUsername` with your actual GitHub username.)*

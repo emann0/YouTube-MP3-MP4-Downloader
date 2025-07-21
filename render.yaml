@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: youtube-downloader
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    build:
+      preDeployCommand: "apt-get update && apt-get install -y ffmpeg"

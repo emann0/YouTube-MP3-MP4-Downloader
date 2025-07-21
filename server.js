@@ -4,10 +4,13 @@ const path = require('path');
 const ffmpeg = require('fluent-ffmpeg');
 const ejs = require('ejs');
 
+const ffmpegPath = require('@ffmpeg-installer/ffmpeg').path;
+ffmpeg.setFfmpegPath(ffmpegPath);
+
 const app = express();
 const port = process.env.PORT || 3000;
 
-// ตั้งค่า Template Engine และ Static Files
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -20,15 +23,18 @@ app.get('/', (req, res) => {
 
 app.post('/convert', async (req, res) => {
   const videoURL = req.body.url;
+  
+  
   if (!ytdl.validateURL(videoURL)) {
-    return res.status(400).send('Invalid YouTube URL.');
+    return res.status(400).render('error', { 
+      message: 'ลิงก์ YouTube ไม่ถูกต้อง! เช็คดีๆ ก่อน' 
+    });
   }
 
   try {
     const info = await ytdl.getInfo(videoURL);
     const videoId = ytdl.getVideoID(videoURL);
 
-  
     const formats = ytdl.filterFormats(info.formats, 'videoandaudio');
     const usefulFormats = formats
       .filter(f => f.qualityLabel && (f.container === 'mp4' || f.container === 'webm'))
@@ -38,14 +44,12 @@ app.post('/convert', async (req, res) => {
         container: f.container,
       }));
 
-   
     usefulFormats.push({
       itag: 'mp3',
       qualityLabel: '128kbps',
       container: 'mp3',
     });
 
-   
     res.render('results', {
       videoTitle: info.videoDetails.title,
       thumbnailUrl: info.videoDetails.thumbnails.pop().url, 
@@ -54,9 +58,12 @@ app.post('/convert', async (req, res) => {
     });
 
   } catch (error) {
-    console.error('Error fetching video info:', error);
-    res.status(500).send('Could not get video info. It might be private or deleted.');
+    console.error('Error fetching video info:', error.message);
+    res.status(500).render('error', { 
+      message: 'หาวิดีโอไม่เจอ อาจจะเป็นวิดีโอส่วนตัว, โดนลบ, หรือไม่ก็ YouTubeลบ  กรุณาลองลิงก์อื่น' 
+    });
   }
+
 });
 
 

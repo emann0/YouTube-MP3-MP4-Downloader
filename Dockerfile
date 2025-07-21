@@ -1,24 +1,24 @@
-# ใช้ Node.js เวอร์ชัน 18 เป็นพื้นฐาน
+# ใช้ Node.js image รุ่น 18 แบบเบาๆ
 FROM node:18-slim
 
-# ตั้งค่า Working Directory ภายใน Container
-WORKDIR /app
-
-# อัปเดตและติดตั้ง FFmpeg (นี่คือหัวใจสำคัญ)
+# ติดตั้ง FFmpeg ที่แม่งเป็นปัญหาชีวิต
 RUN apt-get update && apt-get install -y ffmpeg
 
-# คัดลอก package.json และ package-lock.json เข้าไปก่อน
+# สร้างโฟลเดอร์สำหรับแอป
+WORKDIR /usr/src/app
+
+# ก๊อปไฟล์ package.json และ package-lock.json เข้าไปก่อน
+# เพื่อใช้ cache ของ Docker ตอนลง dependency จะได้เร็วขึ้นถ้าไฟล์นี้ไม่เปลี่ยน
 COPY package*.json ./
 
-# ติดตั้ง Dependencies
+# ลง dependency ทั้งหมด
 RUN npm install
 
-# คัดลอกไฟล์โปรเจกต์ทั้งหมดที่เหลือเข้าไป
+# ก๊อปโค้ดทั้งหมดของมึงเข้าไป
 COPY . .
 
-# บอกให้โลกรู้ว่าแอปของเราทำงานที่ Port ไหน
-# (Render จะจัดการ Port ให้เอง แต่ใส่ไว้เป็นมาตรฐานที่ดี)
-EXPOSE 10000
+# บอก Docker ว่าแอปมึงจะรันบน port 3000
+EXPOSE 3000
 
-# คำสั่งสำหรับรันแอปพลิเคชัน
-CMD [ "npm", "start" ]
+# คำสั่งสำหรับรันแอปของมึง
+CMD [ "node", "server.js" ]

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เกิดข้อผิดพลาด!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-yellow-100 to-red-200 flex justify-center items-center min-h-screen font-sans">
+  <div class="bg-white p-10 rounded-2xl shadow-xl w-11/12 max-w-md text-center border-2 border-red-500">
+    <h1 class="text-red-600 text-5xl font-bold mb-4">
+      ผิดพลาด!
+    </h1>
+    <p class="text-gray-700 text-lg mb-6">
+      <%= message %>  
+    <a
+      href="/"
+      class="w-full inline-block p-4 text-lg font-semibold bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors duration-300 cursor-pointer"
+    >
+      กลับไปหน้าแรก
+    </a>
+  </div>
+</body>
+</html>

@@ -36,9 +36,6 @@ Follow these instructions to get a copy of the project up and running on your lo
 ### Prerequisites / สิ่งที่ต้องมี
 
 - [Node.js](https://nodejs.org/) (which includes npm)
-- [FFmpeg](https://ffmpeg.org/download.html)
-  - *Make sure FFmpeg is installed and its `bin` directory is added to your system's PATH.*
-  - *(สำคัญ) ต้องแน่ใจว่าคุณได้ติดตั้ง FFmpeg และเพิ่มที่อยู่ของโฟลเดอร์ `bin` ลงใน PATH ของระบบแล้ว*
 
 ### Installation / ขั้นตอนการติดตั้ง
 

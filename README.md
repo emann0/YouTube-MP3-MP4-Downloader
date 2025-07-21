@@ -24,7 +24,6 @@ A simple and easy-to-use web application for downloading YouTube videos as MP4 o
 
 - **Backend:** Node.js, Express.js
 - **YouTube Interaction:** `@distube/ytdl-core`
-- **Audio Conversion:** FFmpeg, `fluent-ffmpeg`
 - **Frontend:** HTML, Tailwind CSS
 - **Template Engine:** EJS
 

